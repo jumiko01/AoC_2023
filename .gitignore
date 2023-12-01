@@ -1,6 +1,7 @@
 *
 !.gitignore
 !*/
+!*/*.txt
 !*/*.cpp
 !*/*.h
 !*/*/*.cpp
