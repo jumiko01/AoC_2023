@@ -49,6 +49,10 @@ string getNumbers(string inputStr)
 
     }
 */
+    const char* j = inputStr.c_str();
+    string s = "";
+    j = (s+j).substr( (s+j).find("two")+1, (s+j).size()-(s+j).find("two")+1 )  ;
+
     for( const char* i = inputStr.c_str(); regex_search( i, m, regexp ) ; i = m[0].second)
     {
         for( int i = 1; i < int(m.size()); ++i )
