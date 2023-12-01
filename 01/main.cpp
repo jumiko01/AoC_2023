@@ -30,18 +30,51 @@ string getNumbers(string inputStr)
     }
  */
 
-    regex regexp("^\\d{1,}+\\s|\\s\\d+$|\\s\\d+\\s|^\\d+$");
+    //regex regexp("([0-9]+)");
+//    regex regexp("([0-9 one]+)");
+    regex regexp("([0-9]+)|(one)|(two)|(three)|(four)|(five)|(thix)|(seven)|(eight)|(nine)");
+//    regex regexp("([0-9 one two three four five six seven eight nine]+)");
 
     // flag type for determining the matching behavior (in this case on string objects)
-     smatch m; 
+     cmatch m; 
    
     // regex_search that searches pattern regexp in the string mystr  
-    regex_search(inputStr, m, regexp); 
-    cout<<"String that matches the pattern: ";
-    for (auto x : m) 
-    {   
-        cout << x << " "; 
-        temp += x;
+ /*   regex_search(inputStr, m, regexp); 
+    {        cout<<"String that matches the pattern: ";
+        for (auto x : m) 
+        {   
+            cout << x << " "; 
+            temp += x;
+        }
+
+    }
+*/
+    for( const char* i = inputStr.c_str(); regex_search( i, m, regexp ) ; i = m[0].second)
+    {
+        for( int i = 1; i < int(m.size()); ++i )
+        {
+            string match(m[i].first, m[i].second);
+            cout << match << " "; 
+            if(match == "one")
+                match = "1";
+            else if(match == "two")
+                match = "2";
+            else if(match == "three")
+                match = "3";
+            else if(match == "four")
+                match = "4";
+            else if(match == "five")
+                match = "5";
+            else if(match == "six")
+                match = "6";
+            else if(match == "seven")
+                match = "7";
+            else if(match == "eight")
+                match = "8";
+            else if(match == "nine")
+                match = "9";
+            temp += match;
+        }
     }
 
     return temp;
@@ -70,7 +103,7 @@ string getFirstandLastNumber(string inputStr)
 
 int main()
 {
-  string filename = "C:\\repos\\AoC_2023\\01\\input.txt";
+  string filename = "D:\\projekte\\repos\\AoC_2023\\01\\input.txt";
 //  cout << "Datei: ";
 //  cin >> filename;
 
@@ -88,13 +121,13 @@ int main()
     while (getline(input, line))
     {
 
-        cout << line << '\t';
+        cout << line << "";
         cout << " - ";
         istringstream inStream1(getFirstandLastNumber(line));
         
         int number;
         inStream1 >> number;
-        cout << number << '\n';
+        cout << "--" << number << '\n';
         numbers.push_back(number);
     }  
 
