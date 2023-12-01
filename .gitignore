@@ -1,0 +1,12 @@
+*
+!.gitignore
+!*/
+!*/*.cpp
+!*/*.h
+!*/*/*.cpp
+!*/*/*.h
+!*/*/*/*.cpp
+!*/*/*/*.h
+!*/*.bat
+!README.md
+!*/CMakeLists.txt
