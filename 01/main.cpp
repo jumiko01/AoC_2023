@@ -12,75 +12,49 @@ using namespace std;
 string getNumbers(string inputStr)
 {
     string temp = "";
- /*  for (unsigned int i=0;i<inputStr.size();++i)    //s.size() ist die Anzahl der Zeichen in einem Strings
-    {
-        if( inputStr[i] =='0' || 
-            inputStr[i] =='1' ||  
-            inputStr[i] =='2' ||  
-            inputStr[i] =='3' ||  
-            inputStr[i] =='4' ||  
-            inputStr[i] =='5' ||  
-            inputStr[i] =='6' ||  
-            inputStr[i] =='7' ||  
-            inputStr[i] =='8' ||  
-            inputStr[i] =='9'  )
-        {
-            temp += inputStr[i];
-        }
-    }
- */
 
-    //regex regexp("([0-9]+)");
-//    regex regexp("([0-9 one]+)");
-    regex regexp("([0-9]+)|(one)|(two)|(three)|(four)|(five)|(thix)|(seven)|(eight)|(nine)");
-//    regex regexp("([0-9 one two three four five six seven eight nine]+)");
+    regex regexp("([0-9]+)|(one)|(two)|(three)|(four)|(five)|(six)|(seven)|(eight)|(nine)");
 
-    // flag type for determining the matching behavior (in this case on string objects)
-     cmatch m; 
-   
-    // regex_search that searches pattern regexp in the string mystr  
- /*   regex_search(inputStr, m, regexp); 
-    {        cout<<"String that matches the pattern: ";
-        for (auto x : m) 
-        {   
-            cout << x << " "; 
-            temp += x;
-        }
+    for (std::smatch m; regex_search(inputStr, m, regexp);)
+    {   
+        string num = m.str();
+//        cout << "m.str(); " << m.str() << " - " ;
+        int pos = inputStr.find(num)+1;
+        inputStr = inputStr.substr(pos, inputStr.size()- pos );  //m.suffix();
+//        cout << "inputStr: " << inputStr << " - " ;
+//        cout << "m.suffix(); " <<  m.suffix() << " - ";
 
-    }
-*/
-    const char* j = inputStr.c_str();
-    string s = "";
-    j = (s+j).substr( (s+j).find("two")+1, (s+j).size()-(s+j).find("two")+1 )  ;
 
-    for( const char* i = inputStr.c_str(); regex_search( i, m, regexp ) ; i = m[0].second)
-    {
-        for( int i = 1; i < int(m.size()); ++i )
-        {
-            string match(m[i].first, m[i].second);
-            cout << match << " "; 
-            if(match == "one")
-                match = "1";
-            else if(match == "two")
-                match = "2";
-            else if(match == "three")
-                match = "3";
-            else if(match == "four")
-                match = "4";
-            else if(match == "five")
-                match = "5";
-            else if(match == "six")
-                match = "6";
-            else if(match == "seven")
-                match = "7";
-            else if(match == "eight")
-                match = "8";
-            else if(match == "nine")
-                match = "9";
-            temp += match;
-        }
+//            cout << "num: " << num;
+            string val = "";
+            if(num == "one")
+                val += "1";
+            else if(num == "two")
+                val += "2";
+            else if(num == "three")
+                val += "3";
+            else if(num == "four")
+                val += "4";
+            else if(num == "five")
+                val += "5";
+            else if(num == "six")
+                val += "6";
+            else if(num == "seven")
+                val += "7";
+            else if(num == "eight")
+                val += "8";
+            else if(num == "nine")
+                val += "9";
+            else
+                val += num;
+           
+            temp += val;
+//            cout << ", temp: " << temp << " || ";
+    
+    
     }
 
+    
     return temp;
 }
 
@@ -125,13 +99,13 @@ int main()
     while (getline(input, line))
     {
 
-        cout << line << "";
+        cout << line << "\n";
         cout << " - ";
         istringstream inStream1(getFirstandLastNumber(line));
         
         int number;
         inStream1 >> number;
-        cout << "--" << number << '\n';
+        cout << number << '\n';
         numbers.push_back(number);
     }  
 
