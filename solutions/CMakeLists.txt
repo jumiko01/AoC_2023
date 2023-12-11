@@ -45,10 +45,15 @@ message("### USER COMMENT: configuring main.exe ###")
 
 add_executable(main
     main.cpp
+    01.cpp
+    02.cpp
+    03.cpp
+    xx.cpp
 )
 
 target_include_directories(main PRIVATE
 #    D:/msys64/usr/lib/gcc/x86_64-pc-msys/11.3.0/include/c++/
+    ../Lib/
  )
 
 

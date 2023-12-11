@@ -1,6 +1,6 @@
 #pragma once
 
-#include "stringHelper.h"
+#include "..\Lib\stringHelper.h"
 
 #ifndef _02_H
 #define _02_H

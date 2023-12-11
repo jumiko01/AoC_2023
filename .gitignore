@@ -11,5 +11,5 @@
 !*/*.bat
 !README.md
 !*/CMakeLists.txt
-!AoC_2023/*
-!AoC_2023.sln
+!Lib/*
+!solutions/

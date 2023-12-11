@@ -1,8 +1,5 @@
-// AoC_2023.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
-//
-
 #include <iostream>
-#include "stringHelper.h"
+#include "..\Lib\stringHelper.h"
 #include "01.h"
 #include "02.h"
 #include "03.h"
