@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Quelldateien\01">
+      <UniqueIdentifier>{5ac0ec9c-9426-4474-a8c7-59ad7c338def}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\libs">
+      <UniqueIdentifier>{847f4d2c-5953-4b4e-9ed8-d3bc1827288c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\02">
+      <UniqueIdentifier>{b4f379ad-17d9-45c4-bab2-690a17637c36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\03">
+      <UniqueIdentifier>{39f8d91e-402d-428a-9cd6-230de690a520}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\_template">
+      <UniqueIdentifier>{a9b013ba-5eb0-45b0-94d7-4f6bd3187807}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="01.cpp">
+      <Filter>Quelldateien\01</Filter>
+    </ClCompile>
+    <ClCompile Include="stringHelper.cpp">
+      <Filter>Quelldateien\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="02.cpp">
+      <Filter>Quelldateien\02</Filter>
+    </ClCompile>
+    <ClCompile Include="AoC_2023.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="03.cpp">
+      <Filter>Quelldateien\03</Filter>
+    </ClCompile>
+    <ClCompile Include="xx.cpp">
+      <Filter>Quelldateien\_template</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="01.h">
+      <Filter>Quelldateien\01</Filter>
+    </ClInclude>
+    <ClInclude Include="stringHelper.h">
+      <Filter>Quelldateien\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="02.h">
+      <Filter>Quelldateien\02</Filter>
+    </ClInclude>
+    <ClInclude Include="03.h">
+      <Filter>Quelldateien\03</Filter>
+    </ClInclude>
+    <ClInclude Include="xx.h">
+      <Filter>Quelldateien\_template</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input_01.txt">
+      <Filter>Quelldateien\01</Filter>
+    </Text>
+    <Text Include="input_02.txt">
+      <Filter>Quelldateien\02</Filter>
+    </Text>
+    <Text Include="in_03.txt">
+      <Filter>Quelldateien\03</Filter>
+    </Text>
+    <Text Include="xx.txt">
+      <Filter>Quelldateien\_template</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
