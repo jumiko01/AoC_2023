@@ -7,7 +7,7 @@
 
 int main()
 {
-    int day = 2;
+    int day = 1;
 
     switch (day)
     {

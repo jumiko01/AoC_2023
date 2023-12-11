@@ -44,6 +44,7 @@ endif()
 message("### USER COMMENT: configuring main.exe ###")
 
 add_executable(main
+    ../Lib/stringHelper.cpp
     main.cpp
     01.cpp
     02.cpp

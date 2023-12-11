@@ -25,7 +25,7 @@ string getFirstandLastNumber(string inputStr)
 int main_01()
 {
  //   string filename = "D:\\projekte\\repos\\AoC_2023\\AoC_2023\\input_01.txt";
-    string filename = "input_01.txt";
+    string filename = "C:\\repos\\AoC_2023\\solutions\\in_01.txt";
     //  cout << "Datei: ";
     //  cin >> filename;
 

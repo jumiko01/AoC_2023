@@ -66,7 +66,7 @@ int setMaxQubeCnt(string input, int* redCnt, int* greenCnt, int* blueCnt)
 
 int main_02()
 {
-    string filename = "input_02.txt";
+    string filename = "C:\\repos\\AoC_2023\\solutions\\in_02.txt";
     //  string filename = "D:\\projekte\\repos\\AoC_2023\\01\\input.txt";
     //  cout << "Datei: ";
     //  cin >> filename;

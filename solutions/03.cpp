@@ -2,7 +2,7 @@
 
 int main_03()
 {
-    string filename = "in_03.txt";
+    string filename = "C:\\repos\\AoC_2023\\solutions\\in_03.txt";
     //  string filename = "D:\\projekte\\repos\\AoC_2023\\01\\input.txt";
     //  cout << "Datei: ";
     //  cin >> filename;
